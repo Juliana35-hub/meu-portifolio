@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encanto do Grão | Cafeteria Artesanal</title>
+    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+
+    <!-- TELA INICIAL (SPLASH SCREEN) - ADICIONE ESTE BLOCO ABAIXO -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="splash-item active">
+                <i class="fa-solid fa-award"></i>
+                <p>Qualidade</p>
+            </div>
+            <div class="splash-item">
+                <i class="fa-solid fa-bolt"></i>
+                <p>Entrega Rápida</p>
+            </div>
+            <div class="splash-item">
+                <i class="fa-solid fa-mug-hot"></i>
+                <p>Feito na Hora</p>
+            </div>
+            <div class="splash-item">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Sustentável</p>
+            </div>
+        </div>
+    </div>
+    <!-- FIM DA TELA INICIAL -->
+
+    <!-- 11. Navbar Fixa -->
+    <header>
+        <a href="#" class="logo">Encanto do Grão</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="header-right">
+            <a href="https://wa.me/5592999999999" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.8rem;">Fazer Pedido</a>
+            <div class="mobile-menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO -->
+        <section class="hero" id="inicio">
+            <h1>Café artesanal feito para transformar seu dia</h1>
+            <p>Grãos selecionados, ambiente acolhedor e sabor inesquecível</p>
+            <div class="btn-group">
+                <a href="#cardapio" class="btn btn-primary">Ver Cardápio</a>
+                <a href="https://wa.me/5592999999999" class="btn btn-outline">Fazer Pedido</a>
+            </div>
+        </section>
+
+        <!-- 2. SOBRE -->
+        <section class="about" id="sobre">
+            <div class="about-content reveal">
+                <span>Tradição & Cuidado</span>
+                <h2>Somos uma cafeteria apaixonada por café de verdade.</h2>
+                <p>Nossa missão é resgatar o encanto artesanal em cada xícara. Acreditamos que o café é um momento de conexão, uma pausa necessária no ritmo acelerado do dia a dia.</p>
+                <p>Aqui, cada grão é escolhido a dedo, respeitando o produtor e a natureza, para que você sinta o verdadeiro encanto do grão em forma de bebida.</p>
+                <a href="#cardapio" class="btn btn-primary">Conheça nosso sabor</a>
+            </div>
+            <div class="about-img reveal">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1047" alt="Ambiente Cafeteria">
+            </div>
+        </section>
+
+        <!-- 3. PRODUTOS / CARDÁPIO -->
+        <section class="menu" id="cardapio">
+            <div class="section-header reveal">
+                <h2>Nossa Seleção Especial</h2>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Cafés -->
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600" alt="Cappuccino">
+                    <div class="menu-card-info">
+                        <h3>Cappuccino Cremoso</h3>
+                        <p>Espresso com leite vaporizado e espuma aveludada.</p>
+                        <span class="price">R$ 12,00</span>
+                    </div>
+                </div>
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=600" alt="Latte">
+                    <div class="menu-card-info">
+                        <h3>Latte Baunilha</h3>
+                        <p>Café suave com toque de baunilha e leite quente.</p>
+                        <span class="price">R$ 14,00</span>
+                    </div>
+                </div>
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?q=80&w=600" alt="Mocha">
+                    <div class="menu-card-info">
+                        <h3>Mocha Intenso</h3>
+                        <p>Café with chocolate meio amargo e leite cremoso.</p>
+                        <span class="price">R$ 15,00</span>
+                    </div>
+                </div>
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=600" alt="Macchiato">
+                    <div class="menu-card-info">
+                        <h3>Macchiato Caramelo</h3>
+                        <p>Espresso com espuma de leite e calda de caramelo.</p>
+                        <span class="price">R$ 13,00</span>
+                    </div>
+                </div>
+
+                <!-- Gelados -->
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600" alt="Iced Coffee">
+                    <div class="menu-card-info">
+                        <h3>Iced Coffee Clássico</h3>
+                        <p>Café gelado refrescante com leve doçura.</p>
+                        <span class="price">R$ 11,00</span>
+                    </div>
+                </div>
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600" alt="Frappe">
+                    <div class="menu-card-info">
+                        <h3>Frappé de Chocolate</h3>
+                        <p>Bebida gelada batida com chocolate e gelo.</p>
+                        <span class="price">R$ 16,00</span>
+                    </div>
+                </div>
+
+                <!-- Acompanhamentos -->
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=600" alt="Croissant">
+                    <div class="menu-card-info">
+                        <h3>Croissant Artesanal</h3>
+                        <p>Massa folhada crocante feita na hora.</p>
+                        <span class="price">R$ 9,00</span>
+                    </div>
+                </div>
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600" alt="Cheesecake">
+                    <div class="menu-card-info">
+                        <h3>Cheesecake de Frutas Vermelhas</h3>
+                        <p>Doce equilibrado com calda artesanal.</p>
+                        <span class="price">R$ 17,00</span>
+                    </div>
+                </div>
+                <div class="menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600" alt="Brownie">
+                    <div class="menu-card-info">
+                        <h3>Brownie de Chocolate</h3>
+                        <p>Intenso, macio e levemente crocante.</p>
+                        <span class="price">R$ 12,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DIFERENCIAIS -->
+        <section class="features">
+            <div class="feature-item reveal">
+                <i class="fas fa-seedling"></i>
+                <h4>Qualidade 🌱</h4>
+                <p>Grãos selecionados.</p>
+            </div>
+            <div class="feature-item reveal">
+                <i class="fas fa-shipping-fast"></i>
+                <h4>Entrega Rápida 🚚</h4>
+                <p>Seu café sempre quente.</p>
+            </div>
+            <div class="feature-item reveal">
+                <i class="fas fa-fire"></i>
+                <h4>Feito na Hora 🔥</h4>
+                <p>Frescor inigualável.</p>
+            </div>
+            <div class="feature-item reveal">
+                <i class="fas fa-leaf"></i>
+                <h4>Sustentável 🌍</h4>
+                <p>Respeito à natureza.</p>
+            </div>
+        </section>
+
+        <!-- 5. DEPOIMENTOS (CARROSSEL) -->
+        <section class="testimonials">
+            <div class="section-header reveal">
+                <span>Relatos de Sabor</span>
+                <h2>O que nossos clientes dizem</h2>
+            </div>
+            
+            <div class="carousel-container reveal">
+                <div class="carousel-viewport" style="overflow: hidden; width: 100%;">
+                    <div class="testimonials-track" id="testimonials-track">
+                    <!-- 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100" alt="Ana S.">
+                            <div class="client-info">
+                                <strong>Ana S.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Simplesmente perfeito! O café tem um aroma que toma conta da rua toda.”</p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100" alt="Pedro V.">
+                            <div class="client-info">
+                                <strong>Pedro V.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Melhor café da cidade! O atendimento faz a gente se sentir em casa.”</p>
+                    </div>
+                    <!-- 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100" alt="Juliana M.">
+                            <div class="client-info">
+                                <strong>Juliana M.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“O croissant artesanal é divino, crocante e sempre quentinho!”</p>
+                    </div>
+                    <!-- 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100" alt="Carlos R.">
+                            <div class="client-info">
+                                <strong>Carlos R.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Ambiente nota mil para reuniões rápidas ou apenas relaxar um pouco.”</p>
+                    </div>
+                    <!-- 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100" alt="Mariana L.">
+                            <div class="client-info">
+                                <strong>Mariana L.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Sou viciada no Latte de Baunilha deles. Não tem igual em Manaus!”</p>
+                    </div>
+                    <!-- 6 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=100" alt="Ricardo F.">
+                            <div class="client-info">
+                                <strong>Ricardo F.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Grãos selecionados de verdade. Dá para sentir a diferença no primeiro gole.”</p>
+                    </div>
+                    <!-- 7 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100" alt="Beatriz G.">
+                            <div class="client-info">
+                                <strong>Beatriz G.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“O brownie é surreal de bom! Macio por dentro e com aquela casquinha perfeita.”</p>
+                    </div>
+                    <!-- 8 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=100" alt="Lucas O.">
+                            <div class="client-info">
+                                <strong>Lucas O.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Lugar super instagramável e o café é excelente. Vale muito a visita!”</p>
+                    </div>
+                    <!-- 9 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?q=80&w=100" alt="Fernanda P.">
+                            <div class="client-info">
+                                <strong>Fernanda P.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Sempre volto pelo Mocha Intenso. É o equilíbrio perfeito de café e chocolate.”</p>
+                    </div>
+                    <!-- 10 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100" alt="Gabriel H.">
+                            <div class="client-info">
+                                <strong>Gabriel H.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“A qualidade do grão é impecável. Para quem entende de café, aqui é o lugar.”</p>
+                    </div>
+                    <!-- 11 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100" alt="Camila T.">
+                            <div class="client-info">
+                                <strong>Camila T.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Melhor cappuccino que já tomei na vida. A espuma é muito aveludada.”</p>
+                    </div>
+                    <!-- 12 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100" alt="André D.">
+                            <div class="client-info">
+                                <strong>André D.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Wi-fi rápido e café excelente. Meu novo escritório favorito em Manaus!”</p>
+                    </div>
+                    <!-- 13 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100" alt="Sofia K.">
+                            <div class="client-info">
+                                <strong>Sofia K.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“A decoração é linda, cada cantinho rende uma foto maravilhosa.”</p>
+                    </div>
+                    <!-- 14 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=100" alt="Tiago J.">
+                            <div class="client-info">
+                                <strong>Tiago J.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“Um refúgio de paz no centro da cidade. Café inspirador e calmo.”</p>
+                    </div>
+                    <!-- 15 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=100" alt="Helena B.">
+                            <div class="client-info">
+                                <strong>Helena B.</strong>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p>“O Frappé de Chocolate é a salvação pros dias de calor aqui em Manaus!”</p>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-btn prev" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+        </section>
+
+        <!-- 6. CTA FINAL -->
+        <section class="cta-final reveal">
+            <h2>Pronto para o melhor café da sua vida?</h2>
+            <a href="https://wa.me/5592999999999" class="btn btn-primary" style="padding: 20px 60px; font-size: 1.1rem;">Fazer Pedido Agora</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="#" class="logo">Encanto do Grão</a>
+                <p>O encanto perfeito entre o grão e a xícara.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Horário</h4>
+                <ul>
+                    <li>Seg a Sex: 07h às 19h</li>
+                    <li>Sábado: 08h às 18h</li>
+                    <li>Domingo: 08h às 13h</li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Rua das Acácias, 245 – Centro<br>Manaus – AM, 69010-000</li>
+                    <li><i class="fas fa-phone"></i> (92) 99999-9999</li>
+                    <li><i class="fab fa-instagram"></i> @encantodograo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 ENCANTO DO GRÃO. TODOS OS DIREITOS RESERVADOS.</div>
+    </footer>
+
+    <a href="#inicio" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
