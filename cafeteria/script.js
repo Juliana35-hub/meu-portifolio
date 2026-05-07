@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let splashIndex = 0;
 
     // Trava o scroll assim que o DOM estiver pronto
-    document.body.classList.add('loading');
+    document.body.style.overflow = 'hidden';
 
     // Intervalo para trocar os ícones da tela de splash
     const splashInterval = setInterval(() => {
@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (splash) {
                 splash.classList.add('hidden'); // Esconde a tela preta
             }
-            document.body.classList.remove('loading'); // Libera o scroll
-        }, 8000); // 8 segundos de exibição mínima para um ar mais premium
+            document.body.style.overflow = 'auto'; // Libera o scroll
+        }, 7800); // 7.8s para fechar exatamente no 4º ícone
     });
     // --- LÓGICA DA TELA DE SPLASH (FIM) ---
 

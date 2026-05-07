@@ -88,6 +88,12 @@
     background-color: #F5E6D3; /* Bege/Creme */
 }
 
+/* Regra vital para esconder a tela */
+#splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .splash-content {
     text-align: center;
     transition: color 0.8s ease;
