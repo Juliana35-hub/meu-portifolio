@@ -352,7 +352,7 @@ header.scrolled .theme-btn:hover {
     font-size: 1.2rem;
     margin-bottom: 40px;
     max-width: 700px;
-    color: var(--secondary);
+    color: #f1e8dc; /* Tom creme fixo para visibilidade sobre a imagem escura */
     opacity: 0;
     transform: translateY(20px);
     animation: heroFade 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
@@ -401,13 +401,13 @@ header.scrolled .theme-btn:hover {
 
 .btn-outline {
     background: transparent;
-    border: 2px solid var(--text-light);
-    color: var(--text-light);
+    border: 2px solid #f1e8dc;
+    color: #f1e8dc;
 }
 
 .btn-outline:hover {
-    background: var(--text-light);
-    color: var(--primary);
+    background: #f1e8dc;
+    color: #1b1715;
     transform: translateY(-3px) scale(1.05);
 }
 
