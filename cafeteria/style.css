@@ -16,6 +16,7 @@
     --text-muted: #666666;
     --card-bg: #FFFFFF;
     --header-bg: rgba(255, 248, 240, 0.95);
+    --header-scrolled: #4B2E2B;
     --border-color: rgba(75, 46, 43, 0.05);
     --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -38,6 +39,7 @@
     --text-muted: #d6c7b8; /* Texto secundário */
     --card-bg: #211d1b; /* Fundo secundário/cards */
     --header-bg: rgba(24, 19, 17, 0.95); /* Navbar dark */
+    --header-scrolled: #181311;
     --border-color: #3a312d; /* Bordas suaves */
     --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.25);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -189,9 +191,9 @@ header {
 }
 
 header.scrolled {
-    background: var(--primary);
+    background: var(--header-scrolled);
     box-shadow: var(--shadow-hover);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-color);
 }
 
 header.scrolled .logo,
@@ -702,10 +704,10 @@ header.scrolled .theme-btn:hover {
 
 /* 6. CTA FINAL */
 .cta-final {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     padding: 160px 8%;
     text-align: center;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .cta-final h2 {
