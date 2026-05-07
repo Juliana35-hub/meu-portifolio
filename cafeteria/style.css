@@ -10,8 +10,10 @@
     --secondary: #F5E6D3;
     --bg-creme: #FFF8F0;
     --accent: #D97A2B;
+    --accent-hover: #BF6A24;
     --text-dark: #2A1F19;
     --text-light: #F5E6D3;
+    --text-muted: #666666;
     --card-bg: #FFFFFF;
     --header-bg: rgba(255, 248, 240, 0.95);
     --border-color: rgba(75, 46, 43, 0.05);
@@ -26,17 +28,19 @@
 }
 
 [data-theme="dark"] {
-    --primary: #F5E6D3;
-    --secondary: #4B2E2B;
-    --bg-creme: #120A07;
-    --accent: #D97A2B;
-    --text-dark: #F5E6D3;
-    --text-light: #2A1F19;
-    --card-bg: #1C110D;
-    --header-bg: rgba(18, 10, 7, 0.95);
-    --border-color: rgba(245, 230, 211, 0.1);
-    --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.5);
+    --primary: #c49a6c; /* CarameIo */
+    --secondary: #1b1715; /* Fundo principal */
+    --bg-creme: #1b1715; 
+    --accent: #c49a6c; 
+    --accent-hover: #ddb07a; /* Hover dos botões */
+    --text-dark: #f1e8dc; /* Texto principal */
+    --text-light: #1b1715; 
+    --text-muted: #d6c7b8; /* Texto secundário */
+    --card-bg: #211d1b; /* Fundo secundário/cards */
+    --header-bg: rgba(24, 19, 17, 0.95); /* Navbar dark */
+    --border-color: #3a312d; /* Bordas suaves */
+    --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.25);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 #scroll-progress {
@@ -388,7 +392,7 @@ header.scrolled .theme-btn:hover {
 }
 
 .btn-primary:hover {
-    background-color: #BF6A24;
+    background-color: var(--accent-hover);
     transform: translateY(-3px) scale(1.05);
     /* Zoom leve */
     box-shadow: 0 10px 20px rgba(217, 122, 43, 0.3);
@@ -512,7 +516,7 @@ header.scrolled .theme-btn:hover {
 }
 
 .menu-card-info p {
-    color: #666;
+    color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 20px;
 }
@@ -608,7 +612,7 @@ header.scrolled .theme-btn:hover {
 
 .testimonial-card p {
     font-style: italic;
-    color: #555;
+    color: var(--text-muted);
     font-size: 1.05rem;
     line-height: 1.6;
 }
@@ -729,7 +733,7 @@ footer {
     padding-top: 40px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-muted);
 }
 
 @media (max-width: 1024px) {
