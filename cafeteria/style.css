@@ -17,6 +17,7 @@
     --card-bg: #FFFFFF;
     --header-bg: rgba(255, 248, 240, 0.95);
     --header-scrolled: #4B2E2B;
+    --header-scrolled-text: #F5E6D3;
     --border-color: rgba(75, 46, 43, 0.05);
     --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -40,6 +41,7 @@
     --card-bg: #211d1b; /* Fundo secundário/cards */
     --header-bg: rgba(24, 19, 17, 0.95); /* Navbar dark */
     --header-scrolled: #181311;
+    --header-scrolled-text: #c49a6c;
     --border-color: #3a312d; /* Bordas suaves */
     --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.25);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -200,8 +202,8 @@ header.scrolled .logo,
 header.scrolled .nav-links a,
 header.scrolled .mobile-menu-icon,
 header.scrolled .theme-btn {
-    color: var(--secondary);
-    border-color: var(--secondary);
+    color: var(--header-scrolled-text);
+    border-color: var(--header-scrolled-text);
 }
 
 header.scrolled .theme-btn:hover {
