@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trava o scroll assim que o DOM estiver pronto
     document.body.classList.add('loading');
 
-    // Intervalo para trocar os ícones da tela de splash
+     // Intervalo para trocar os ícones da tela de splash
     const splashInterval = setInterval(() => {
         splashItems[splashIndex].classList.remove('active');
         splashIndex = (splashIndex + 1) % splashItems.length;
         splashItems[splashIndex].classList.add('active');
-    }, 1000); // Troca a cada 1 segundo
+    }, 2000); // Troca a cada 2 segundos para dar tempo de ler
 
     // Função para esconder a tela de splash quando tudo carregar
     window.addEventListener('load', () => {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 splash.classList.add('hidden'); // Esconde a tela preta
             }
             document.body.classList.remove('loading'); // Libera o scroll
-        }, 3000); // 3 segundos de exibição mínima
+        }, 8000); // 8 segundos de exibição mínima para um ar mais premium
     });
     // --- LÓGICA DA TELA DE SPLASH (FIM) ---
     
