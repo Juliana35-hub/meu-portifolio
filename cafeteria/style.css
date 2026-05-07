@@ -73,26 +73,32 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    /* Usando sua cor primária (marrom escuro) para o fundo */
-    background-color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Z-index maior que o do scroll-progress (2000) */
     z-index: 5000;
-    transition: opacity 0.8s ease, visibility 0.8s;
+    transition: background-color 0.8s ease, opacity 0.8s ease, visibility 0.8s;
 }
 
-/* Quando o sistema carregar, essa classe será adicionada via JS */
-#splash-screen.hidden {
-    opacity: 0;
-    visibility: hidden;
+#splash-screen.theme-dark {
+    background-color: #1b1715; /* Café Profundo */
+}
+
+#splash-screen.theme-light {
+    background-color: #F5E6D3; /* Bege/Creme */
 }
 
 .splash-content {
     text-align: center;
-    /* Usando sua cor secundária (creme) para o texto/ícones */
-    color: var(--secondary);
+    transition: color 0.8s ease;
+}
+
+#splash-screen.theme-dark .splash-content {
+    color: #f1e8dc; /* Texto claro */
+}
+
+#splash-screen.theme-light .splash-content {
+    color: #1b1715; /* Texto escuro */
 }
 
 .splash-item {
@@ -104,22 +110,28 @@
 
 .splash-item.active {
     display: flex;
-    /* Aplicando a animação que explicamos antes */
-    animation: splashAppear 0.6s ease-out forwards;
+    animation: splashFadeIn 0.8s ease forwards;
 }
 
 .splash-item i {
     font-size: 4rem;
     margin-bottom: 20px;
-    /* Cor de destaque (laranja/âmbar) nos ícones */
-    color: var(--accent);
+    transition: color 0.8s ease;
+}
+
+#splash-screen.theme-dark .splash-item i {
+    color: #c49a6c; /* CarameIo */
+}
+
+#splash-screen.theme-light .splash-item i {
+    color: #4B2E2B; /* Marrom Café */
 }
 
 .splash-item p {
     font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
     font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* Roteiro da animação: o ícone surge de baixo e aparece suavemente */

@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
         splashItems[splashIndex].classList.remove('active');
         splashIndex = (splashIndex + 1) % splashItems.length;
         splashItems[splashIndex].classList.add('active');
+        
+        // Remove temas anteriores e adiciona o novo tema ao container
+        splash.classList.remove('theme-dark', 'theme-light');
+        if (splashIndex % 2 === 0) {
+            splash.classList.add('theme-dark');
+        } else {
+            splash.classList.add('theme-light');
+        }
     }, 2000); // Troca a cada 2 segundos para dar tempo de ler
 
     // Função para esconder a tela de splash quando tudo carregar
