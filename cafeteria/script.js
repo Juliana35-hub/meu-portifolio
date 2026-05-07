@@ -12,29 +12,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Intervalo para trocar os ícones da tela de splash
     const splashInterval = setInterval(() => {
+        // Se já mostramos os 4 ícones, paramos e aguardamos o fechamento
+        if (splashIndex >= splashItems.length - 1) {
+            clearInterval(splashInterval);
+            return;
+        }
+
         splashItems[splashIndex].classList.remove('active');
-        splashIndex = (splashIndex + 1) % splashItems.length;
+        splashIndex++;
         splashItems[splashIndex].classList.add('active');
         
-        // Remove temas anteriores e adiciona o novo tema ao container
+        // Troca o tema do container
         splash.classList.remove('theme-dark', 'theme-light');
         if (splashIndex % 2 === 0) {
             splash.classList.add('theme-dark');
         } else {
             splash.classList.add('theme-light');
         }
-    }, 2000); // Troca a cada 2 segundos para dar tempo de ler
+    }, 2000);
 
-    // Função para esconder a tela de splash quando tudo carregar
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            clearInterval(splashInterval); // Para a animação
-            if (splash) {
-                splash.classList.add('hidden'); // Esconde a tela preta
-            }
-            document.body.style.overflow = 'auto'; // Libera o scroll
-        }, 7800); // 7.8s para fechar exatamente no 4º ícone
-    });
+    // Função para esconder a tela de splash
+    // Usamos um tempo fixo desde o início (DOMContentLoaded) para garantir precisão
+    setTimeout(() => {
+        clearInterval(splashInterval);
+        if (splash) {
+            splash.classList.add('hidden');
+        }
+        document.body.style.overflow = 'auto'; 
+    }, 8200); // 8.2s garante que o último ícone apareça por completo
     // --- LÓGICA DA TELA DE SPLASH (FIM) ---
 
     // --- LÓGICA DE TEMA (DARK/LIGHT MODE) ---
