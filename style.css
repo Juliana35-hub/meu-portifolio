@@ -212,4 +212,4 @@ nav .lk a.on,nav .lk a:hover{color:var(--accent)}
 .skill-level{display:block;margin-top:8px;color:var(--mut);font-size:.72rem}
 .project-link[aria-disabled="true"]{opacity:.65;cursor:not-allowed}
 .form-status{min-height:1.4em;color:var(--mut);font-size:.78rem}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}\n
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
