@@ -3,7 +3,7 @@
 const $=s=>document.querySelector(s);
 setTimeout(()=>$('#intro').classList.add('off'),1800);
 (function(){const cv=$('#bot'),say=$('#say'),sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';sc.onload=()=>{(document.fonts?document.fonts.load('700 54px "Space Grotesk"'):Promise.resolve()).then(init,init)};document.head.appendChild(sc);
-function init(){try{const T=THREE,r=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,2));r.outputEncoding=T.sRGBEncoding;r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.1;
+function init(){try{const T=THREE,r=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true,powerPreference:'high-performance'});r.setPixelRatio(Math.min(Math.max(devicePixelRatio,2),3));r.outputEncoding=T.sRGBEncoding;r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.12;
 const scene=new T.Scene(),cam=new T.PerspectiveCamera(39,1,.1,50);cam.position.set(0,.2,11);
 scene.add(new T.HemisphereLight(0xffffff,0xb9a2e8,.7));const key=new T.DirectionalLight(0xffffff,1.2);key.position.set(3,5,6);scene.add(key);
 const fill=new T.PointLight(0xb9a2e8,.65,30);fill.position.set(-5,1,4);scene.add(fill);const rim=new T.PointLight(0xe63859,.55,30);rim.position.set(4,2,-4);scene.add(rim);
@@ -37,7 +37,7 @@ function tex(w,h,f){const c=document.createElement('canvas');c.width=w;c.height=
 function sp(t){const s=new T.Sprite(new T.SpriteMaterial({map:t,transparent:true,depthTest:true,depthWrite:false,toneMapped:false}));scene.add(s);return s}
 function put(s,sz,asp,o){s.scale.set(sz*asp,sz,1);items.push(Object.assign({s:s,ph:Math.random()*6.28,off:new T.Vector3(),vel:new T.Vector3(),spin:0},o))}
 const cols=['#b9a2e8','#e63859','#171426','#b9a2e8'],L=['L','U','N','A'];
-L.forEach((ch,i)=>{const c=cols[i];put(sp(tex(256,256,x=>{x.beginPath();x.arc(128,128,108,0,Math.PI*2);x.fillStyle='#fff';x.shadowColor='rgba(23,20,38,.2)';x.shadowBlur=14;x.fill();x.shadowColor='transparent';x.lineWidth=6;x.strokeStyle='rgba(185,162,232,.72)';x.stroke();x.font='700 138px '+F;x.textAlign='center';x.textBaseline='middle';x.fillStyle=c;x.fillText(ch,128,128)})),.96,1,{tag:false,a0:i/L.length*6.283,sp:(i%2?-1:1)*(.25+(i%3)*.06),rx:i%2?2.7:2.55,cy:1.05,ry:1.0})});
+L.forEach((ch,i)=>{const c=cols[i];put(sp(tex(512,512,x=>{x.beginPath();x.arc(256,256,216,0,Math.PI*2);x.fillStyle='#fff';x.shadowColor='rgba(23,20,38,.2)';x.shadowBlur=28;x.fill();x.shadowColor='transparent';x.lineWidth=12;x.strokeStyle='rgba(185,162,232,.72)';x.stroke();x.font='700 276px '+F;x.textAlign='center';x.textBaseline='middle';x.fillStyle=c;x.fillText(ch,256,256)})),.96,1,{tag:false,a0:i/L.length*6.283,sp:(i%2?-1:1)*(.25+(i%3)*.06),rx:i%2?2.7:2.55,cy:1.05,ry:1.0})});
 const PH=['Oi, tudo bem?','Você já conheceu a minha humana?','Acho que você vai adorar conhecê-la!','Vamos nessa?','Bip bop!','Que bom te ver!'],CL=['Oi, tudo bem?','Oba!','Uhu!','Bip bop!'];
 let mx=0,my=0,tx=0,ty=0,jump=0,play=null,nextPlay=5,dzA=0,dzB=0,dzs=0,spins=0,lastSpin=0,wasD=0,ww=0,wUntil=0,pi=0,tm,px=0,tgt=0,run=0,face=0,nextAct=4,nextRoam=6,lastT=0;
 const ease=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2,Pp=new T.Vector3(),orb=new T.Vector3(),ray=new T.Raycaster(),nd=new T.Vector2(),cen=new T.Vector3();
